@@ -20,9 +20,10 @@ SampleApp2::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-   # Precompile Blueprint CSS
+   # Precompile Blueprint and bootstrap CSS/JS
   config.assets.precompile += [ "blueprint/*.css" ]
   config.assets.precompile += [ "bootstrap/*.css" ]
+  config.assets.precompile += [ "bootstrap/*.js" ]
   # Force all access to the app over SSL, use Strict-Transport-Security, 
   # and use secure cookies.
   config.force_ssl = true

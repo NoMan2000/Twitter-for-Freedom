@@ -33,5 +33,7 @@ blueprint/src/ie.css: blueprint/src/ie-99445b8a51303419516e453236269c0e.css
 blueprint/src/print.css: blueprint/src/print-8d01042d44acf14ae6a81d29833fa375.css
 blueprint/src/reset.css: blueprint/src/reset-a99bd55b17f663346b6c3ddc6d7e057c.css
 blueprint/src/typography.css: blueprint/src/typography-c19538a89c59a7980ab0b961300d64cd.css
-glyphicons-halflings-white.png: glyphicons-halflings-white-4fbb6a0b9b4e61912f486ac494a858f1.png
-glyphicons-halflings.png: glyphicons-halflings-2ed0cba6eca0f44737ab78f1e58bc11e.png
+bootstrap/bootstrap-responsive.css: bootstrap/bootstrap-responsive-bd99fe539d4f6388df40c37ea0ce3510.css
+bootstrap/bootstrap-responsive.min.css: bootstrap/bootstrap-responsive.min-9f15bd5018f0f77fa8b8d40332c21df6.css
+bootstrap/bootstrap.css: bootstrap/bootstrap-652cd14f731c681f8e50ba0c07c572cc.css
+bootstrap/bootstrap.min.css: bootstrap/bootstrap.min-6d1cd6888249267e11cccb8df00afc09.css
