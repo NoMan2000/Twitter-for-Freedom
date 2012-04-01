@@ -10,7 +10,7 @@
         <%= will_paginate @users %>
       <% end %>
     </td>
-    <td class="sidebar round">
+    <td class="sidebar round span6">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
       <strong>Microposts</strong> <%= @user.microposts.count %>
