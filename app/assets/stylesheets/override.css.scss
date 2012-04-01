@@ -14,10 +14,11 @@ $lightGreen: rgba(95,240,159, 1);
 body {
 	padding-top: 60px;
 // needs latest Compass, add '@import "compass"' to your scss
-background-color: rgb(14,14,14); // Old browsers
-@include filter-gradient(#0e0e0e, #7d7e7d, vertical); // IE6-9
-@include background-image(linear-gradient(top,  rgba(214,214,214,0.4) 0%,rgba(125,126,125,0) 100%));
 
+
+@include background-image(linear-gradient(top,  rgba(214,214,214,0.4) 0%,rgba(125,126,125,0) 100%));
+@include filter-gradient(#0e0e0e, #7d7e7d, vertical); // IE6-9
+background-color: rgb(14,14,14); // Old browsers
 }
 
 @import "bootstrap/bootstrap-responsive";
