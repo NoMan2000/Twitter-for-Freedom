@@ -10,7 +10,7 @@
       </h1>
       <%= render 'follow_form' if signed_in? %>
       <% if @user.microposts.any? %>
-        <table class="microposts">
+        <table class="microposts span7">
           <%= render @microposts %>
         </table>
         <%= will_paginate @microposts %>
