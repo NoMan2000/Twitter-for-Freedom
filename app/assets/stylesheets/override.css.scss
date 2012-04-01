@@ -19,6 +19,8 @@ body {
 @include background-image(linear-gradient(top,  rgba(214,214,214,0.4) 0%,rgba(125,126,125,0) 100%));
 @include filter-gradient(#0e0e0e, #7d7e7d, vertical); // IE6-9
 background-color: rgb(14,14,14); // Old browsers
+background-attachment: fixed;
+background-position: top left;
 }
 
 @import "bootstrap/bootstrap-responsive";
