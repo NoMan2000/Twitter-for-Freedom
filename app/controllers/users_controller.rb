@@ -23,22 +23,22 @@ WillPaginate.per_page = 10
     end
   end
 
-def update
-    if @user.update_attributes(params[:user])
-      flash[:success] = "Profile updated"
-      redirect_to @user
-    else
-      render 'edit'
-    end
+  def update
+      if @user.update_attributes(params[:user])
+        flash[:success] = "Profile updated"
+        redirect_to @user
+      else
+        render 'edit'
+      end
   end
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.paginate(page: params[:page], :per_page => 10)
   end
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    @microposts = @user.microposts.paginate(page: params[:page], :per_page => 10)
   end
 
   def destroy
@@ -47,17 +47,17 @@ def update
     redirect_to users_path
   end
 
-    def following
+  def following
     @title = "Following"
     @user = User.find(params[:id])
-    @users = @user.followed_users.paginate(page: params[:page])
+    @users = @user.followed_users.paginate(page: params[:page], :per_page => 10)
     render 'show_follow'
   end
 
   def followers
     @title = "Followers"
     @user = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @users = @user.followers.paginate(page: params[:page], :per_page => 10)
     render 'show_follow'
   end
 
@@ -68,7 +68,7 @@ private
         store_location
         redirect_to signin_path, notice: "Please sign in."
       end
-    end
+   end
 
     def correct_user
       @user = User.find(params[:id])
