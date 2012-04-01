@@ -16,7 +16,7 @@ body {
 // needs latest Compass, add '@import "compass"' to your scss
 background-color: rgb(14,14,14); // Old browsers
 @include filter-gradient(#0e0e0e, #7d7e7d, vertical); // IE6-9
-@include background-image(linear-gradient(top,  rgba(14,14,14,0.4) 0%,rgba(125,126,125,0) 100%));
+@include background-image(linear-gradient(top,  rgba(214,214,214,0.4) 0%,rgba(125,126,125,0) 100%));
 
 }
 
@@ -104,4 +104,20 @@ nav.round ul li{
 @include background-image(radial-gradient(center, ellipse cover,  rgba(56,56,56,1) 0%,rgba(198,198,198,0.71) 100%));
 }
   a:active{}	
+}
+td.span9 h1{
+	margin-left: 5%;
+}
+div.navbar-inner{
+	color: rgba(255,255,255,1);
+// needs latest Compass, add '@import "compass"' to your scss
+@include filter-gradient(#c6c6c6, #383838, horizontal); // IE6-9 fallback on horizontal gradient
+@include background-image(radial-gradient(center, ellipse cover,  rgba(198,198,198,0.71) 0%,rgba(56,56,56,1) 100%));
+
+color: rgba(0,0,0,1);
+text-shadow: 2px 2px 2px #000;
+filter: dropshadow(color=#000, offx=2, offy=2);
+}
+.navbar .nav > li > a {  
+color: #FFFFFF;
 }
