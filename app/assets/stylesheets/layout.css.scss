@@ -3,6 +3,9 @@ $background-color: #cff;
 $link-color: #09c;
 $visited-link-color: #069;
 
+.clear{
+  clear: both;
+}
 .container {
   width: $full-width;
 }

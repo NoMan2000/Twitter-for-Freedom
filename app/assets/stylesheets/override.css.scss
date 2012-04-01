@@ -1,0 +1,107 @@
+@import "compass";
+$iconSpritePath: image-path('glyphicons-halflings.png');
+$iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
+
+$navbarBackground: #555;
+$mainColor: rgba(31,85,89,1);
+$darkGreen: rgba(33,86,112,1);
+$darkBlue: rgba(0, 68, 204,1);
+$lightBlue: rgba(33, 112, 196, 1);
+$lightGreen: rgba(95,240,159, 1);
+
+@import "bootstrap/bootstrap";
+
+body {
+	padding-top: 60px;
+// needs latest Compass, add '@import "compass"' to your scss
+background-color: rgb(14,14,14); // Old browsers
+@include filter-gradient(#0e0e0e, #7d7e7d, vertical); // IE6-9
+@include background-image(linear-gradient(top,  rgba(14,14,14,0.2) 0%,rgba(125,126,125,0.8) 100%));
+
+}
+
+@import "bootstrap/bootstrap-responsive";
+
+.navbar .btn, .navbar .btn-group {
+margin: 5px 0px 5px 0px;
+} 
+.navbar .divider-vertical {
+height: 40px;
+width: 1px;
+margin: 5px;
+overflow: hidden;
+background-color: #000;
+border-right: 1px solid $darkBlue;
+}
+.navbar .brand {
+	margin-top: 5px;
+	font-size: 26px;
+	color: $darkBlue;
+}
+section.round.clear 
+{background: rgb(228,245,252); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(228,245,252,1) 0%, rgba(191,232,249,1) 19%, rgba(159,216,239,1) 70%, rgba(42,176,237,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(228,245,252,1)), color-stop(19%,rgba(191,232,249,1)), color-stop(70%,rgba(159,216,239,1)), color-stop(100%,rgba(42,176,237,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(228,245,252,1) 0%,rgba(191,232,249,1) 19%,rgba(159,216,239,1) 70%,rgba(42,176,237,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(228,245,252,1) 0%,rgba(191,232,249,1) 19%,rgba(159,216,239,1) 70%,rgba(42,176,237,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(228,245,252,1) 0%,rgba(191,232,249,1) 19%,rgba(159,216,239,1) 70%,rgba(42,176,237,1) 100%); /* IE10+ */
+background: linear-gradient(top, rgba(228,245,252,1) 0%,rgba(191,232,249,1) 19%,rgba(159,216,239,1) 70%,rgba(42,176,237,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#2ab0ed',GradientType=0 ); /* IE6-9 */
+}
+.navbar .nav > li > a:hover {
+background-color: rgba(255, 255, 255, 0.2);
+color: white;
+text-decoration: none;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-moz-transform: scale(1.1) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);
+-webkit-transform: scale(1.1) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);
+-o-transform: scale(1.1) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);
+-ms-transform: scale(1.1) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);
+transform: scale(1.1) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);
+-webkit-transition: all .25s ease-in-out;
+-moz-transition: all .25s ease-in-out;
+-ms-transition: all .25s ease-in-out;
+-o-transition: all .25s ease-in-out;
+transition: all .25s ease-in-out;
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  background: rgba(0, 102, 153, 1);
+  color: white;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px;
+  a:link{background: rgba(0, 102, 153, 1);}
+  a:visited{background: rgba(0, 102, 153, 1);}
+  a:hover{background: rgba(0, 102, 153, 0.4);}
+  a:active{background: rgba(0, 102, 153, 1);}
+}
+nav.round ul li{
+	a{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 10px;
+	margin-right: 5px;
+	text-decoration: none;
+	color: rgba(255,255,255,1);
+// needs latest Compass, add '@import "compass"' to your scss
+@include filter-gradient(#c6c6c6, #383838, horizontal); // IE6-9 fallback on horizontal gradient
+@include background-image(radial-gradient(center, ellipse cover,  rgba(198,198,198,0.71) 0%,rgba(56,56,56,1) 100%));
+
+	}
+	a:link{}
+  a:visited{}
+  a:hover{
+// needs latest Compass, add '@import "compass"' to your scss
+@include filter-gradient(#383838, #c6c6c6, horizontal); // IE6-9 fallback on horizontal gradient
+@include background-image(radial-gradient(center, ellipse cover,  rgba(56,56,56,1) 0%,rgba(198,198,198,0.71) 100%));
+}
+  a:active{}	
+}
