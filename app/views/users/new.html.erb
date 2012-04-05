@@ -1,9 +1,16 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 
-<%= form_for(@user) do |f| %>
-<%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
+<%= simple_form_for(@user, :html => {:class => 'form-horizontal'}) do |f| %>
+
+<!-- <%= render 'shared/error_messages', object: f.object %> -->
+<div class="field"><%= f.input :name %></div>
+<div class="field"><%= f.input :email %></div>
+<div class="field"><%= f.input :password %></div>
+<div class="field"><%= f.input :password_confirmation %></div>
+
+
+<!--   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
@@ -18,8 +25,8 @@
   <div class="field">
     <%= f.label :password_confirmation, "Confirmation" %><br />
     <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+  </div> -->
+  <!-- <div class="actions"> -->
+ <div class="submit">   <%= f.submit "Sign up" %></div>
+  <!-- </div> -->
 <% end %>

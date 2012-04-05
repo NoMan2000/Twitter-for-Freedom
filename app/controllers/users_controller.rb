@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 before_filter :signed_in_user, only: [:index, :edit, :update]
   before_filter :correct_user,   only: [:edit, :update]
 before_filter :admin_user,     only: :destroy
+respond_to :html, :json
 
 WillPaginate.per_page = 10
 
@@ -24,12 +25,16 @@ WillPaginate.per_page = 10
   end
 
   def update
-      if @user.update_attributes(params[:user])
-        flash[:success] = "Profile updated"
-        redirect_to @user
-      else
-        render 'edit'
-      end
+      @user = User.find(params[:id])
+      @user.update_attributes(params[:user])
+      respond_with @user
+
+      #if @user.update_attributes(params[:user])
+      #  flash[:success] = "Profile updated"
+      #  redirect_to @user
+      #else
+      #  render 'edit'
+      #end
   end
 
   def index
