@@ -25,16 +25,14 @@ WillPaginate.per_page = 10
   end
 
   def update
-      @user = User.find(params[:id])
-      @user.update_attributes(params[:user])
-      respond_with @user
 
-      #if @user.update_attributes(params[:user])
-      #  flash[:success] = "Profile updated"
-      #  redirect_to @user
-      #else
-      #  render 'edit'
-      #end
+
+      if @user.update_attributes(params[:user])
+       flash[:success] = "Profile updated"
+       redirect_to @user
+      else
+       render 'edit'
+      end
   end
 
   def index
